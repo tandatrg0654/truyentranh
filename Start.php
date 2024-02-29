@@ -7,6 +7,11 @@ try {
     $ketnoi = mysqli_connect('localhost','root','','quanlytruyenonline') or die("Lỗi kết nối");
     mysqli_close($ketnoi);
     $created =true;
+}
+catch(\Throwable $th){
+    echo "Lỗi kết nối";
+}
+try{
     //tao
 $ketnoi = mysqli_connect('localhost','root','') or die("Lỗi kết nối");
 mysqli_set_charset($ketnoi,'utf8');
